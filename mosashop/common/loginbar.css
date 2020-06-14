@@ -1,0 +1,51 @@
+.login_bar {
+  overflow: hidden;
+  /* overflow 요소의 박스에 내용이 길 때 어떻게 보일지 선택하는 속성
+     overflow : visible 기본값, 내용이 더 길면 흘러넘치게 보임
+     overflow : hidden 내용이 넘치면 자름, 자른 부분은 보이지 않음
+     overflow : scroll 내용이 넘치지 않아도 항상 스크롤바가 보임
+     overflow : auto 내용이 잘릴때만 스크롤바가 보임 */
+  background-color: #000000;
+  font-family: "돋움";
+  margin-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+/* Float the link section to the right */
+.login_bar-right {
+  float: right; /* 전체 가로화면 한줄을 다 쓰려고 .login_bar에는 float 속성 넣지않고, 클래스 따로 만들어서 float:right; 속성만 따로 줌*/
+/*    padding: 30px 30px;  */
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.login_bar a { /*링크 연결하는 파랑글씨 밑줄말고 다르게 주려고 style값 따로 줌*/
+/*    float: left;  */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px;
+/*      line-height: 10px; */
+  border-radius: 4px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.footer .footer-wrap .footer_content .aside {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  letter-spacing: -.5px;
+}

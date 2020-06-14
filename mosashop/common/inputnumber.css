@@ -1,0 +1,15 @@
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        appearance: none; /* appearance 속성: 운영체제, 브라우저에 기본적으로 설정돼있는 테마를 기반으로 요소를 표현함. 네이티브로 지원되는 모양을 해제하거나 추가할 때 이 속성을 이용함
+         예를 들어, iOS의 폼 요소들에 부여돼있는 둥근 테두리값이나 그림자효과를 제거할 때 사용할 수 있음
+         Webkit 계열 브라우저의 'type="search"' 필드의 둥근 테두리값이나 reset 효과를 나타내는 버튼을 삭제하는 데 사용할 수 있음
+         select 필드 기본 화살표 모양을 삭제하거나 대체할 수 있음 */
+        -webkit-appearance: none; /* Safari와 Chrome에서 */
+        -moz-appearance: none; /* firefox 에서 */
+        margin: 0;
+    }
+
+    input[type="number"]{ /* 내부 버튼 삭제한 뒤에, input number 필드의 외형을 text field로 바꿔줘야 함 */
+      -moz-appearance: textfield;
+    }

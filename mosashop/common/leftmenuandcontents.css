@@ -1,0 +1,36 @@
+/* 한 가로선상에서 정렬하려면 class로 묶어서 정렬함 */
+.contents {
+  float: left; /* 상단바 아래에서 화면에 들어갈 메뉴바랑 컨텐츠 내용을 묶어줌 */
+  padding: 20px;
+}
+
+#main_cap_menu {
+  /* 왼쪽 정렬하고 오른쪽 옆에는 다른 컨텐츠가 올 수 있도록 함 */
+     /* float: left;
+  display: inline; */
+
+  margin-top: 40px;
+  text-align: center; /* text-align 텍스트 정렬방식. 문단 정렬방식 left, right, center.. 등등 */
+  border-top: 15px double black;
+  border-bottom: 15px double black;
+  width: 100px;
+  margin-bottom: 600px;
+  margin-left: 30px;
+}
+
+#main_cap_menu a, #main_content a{
+  color: black; /* 글씨색 */
+  text-decoration: none; /* 밑줄 없애기 */
+}
+
+#main_cap_menu li { /* 메뉴 간격 띄우려고 p 태그에 스타일 줌 */
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#main_cap_menu ul { /* 메뉴 간격 띄우려고 p 태그에 스타일 줌 */
+  list-style-type: none;
+  padding: 0; /* ul은 여백이 생겨 딱 붙지 않으니까 padding, margin 다 0을 세팅함 */
+  margin: 0;
+  line-height:100%  /* 뭔가 패딩처럼 있을때랑 없을때 차이가 있음*/
+}

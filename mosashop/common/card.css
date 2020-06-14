@@ -1,0 +1,65 @@
+.product_card {
+  width: 280px;
+  height: 410px;
+  /* border: 3px solid black; */
+  background-color: #2a2a2a;
+  position: relative;
+  color: white;
+  /* 1모든 태그들은 기본값 position: static 상태 => 왼쪽->오른쪽, 위->아래로 쌓임
+     2태그 위치를 static에서 살짝 변경하고 싶을 때/ 위치계산을 할 때 static의 원래위치부터 계산함 position: relative 사용 (top, right, bottom, left 속성을 사용해 위치조절 가능
+     각각 방향을 기준으로 태그 안쪽방향으로 이동하기 때문에 top:5px 하면 아래로 이동함. z-index: 1; 속성을 높게 주면 다른 태그보다 위에 올라옴)
+     3스크롤을 내려도 그 자리에 계속 있는 메뉴 position: fixed; 특정위치에 고정
+     4position: absolute도 있는데 어려움 ㅋㅋ */
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  /* margin: auto; */
+  margin: 10px;
+}
+
+.product_image {
+/*      width: 270px;
+  height: 250px;  */
+
+  resize: both; /* 이미지 최대 사이즈에 적용 */
+  float: center; /* 가운데 정렬 */
+  max-width: 290px; /* 넓이를 지정 */
+  height: 240px; /* 높이를 지정. 하거나 auto로 하거나. */
+  margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
+
+/*      background-image: url("https://a-static.besthdwallpaper.com/spider-man-s-awesome-selfie-wallpaper-9842_L.jpg");
+  background-size: cover;  */
+}
+
+.product_explain {
+  width: 96%;
+  height: 20%;
+  margin: auto;
+  display: absolute;
+  z-index: 2;
+}
+
+#price{
+  float: right;
+}
+
+
+    /* .productcontent {
+        float: left;
+        padding: 15px;
+    } */
+
+    .mainproduct {
+      display: block;
+      margin-left: 160px;
+    }
+
+    #main_image {
+      margin-left: 270px;
+      margin-right: 300px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    #menu_contents {
+      margin-left: 10px;
+    }

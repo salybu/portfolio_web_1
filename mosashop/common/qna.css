@@ -1,0 +1,33 @@
+#write_form {
+  /* display: block; 요소들은 중앙정렬할 때 margin: 0 auto; 이용, 이 때 정렬하려는 요소의 넓이를 반드시 지정하고 margin: 0 auto 써야 함
+     인라인요소들은 text-align 속성 이용
+                p {
+                  width: 100px;
+                  margin: 0 auto;
+                }*/
+  display: block;
+  width: 750px;
+  border: 3px solid black;
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin:0 auto;
+  margin-top: 30px;
+}
+
+.table_title {
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color:  white;
+}
+
+.table_contents {
+  width: 600px;
+  height: 40px;
+}
+
+.table_contents input {
+  width: 590px;
+  margin-left: 5px;
+}

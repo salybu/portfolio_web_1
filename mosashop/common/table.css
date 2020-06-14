@@ -1,0 +1,60 @@
+#ulTable > li {
+  width: 1300px;
+  margin-left: 50px;
+  margin-top: 10px;
+  line-height: 3em;
+  font-family: "맑은 고딕";
+  text-align: center;
+}
+
+#ulTable > li:first-child > ul > li { /* 맨 위에 분류표시하는 줄 */
+/*      background-color: #c9c9c9;  */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ulTable > li > ul { /* 게시판 내용 한 줄 No, 제목, 작성자.. 모든 요소가 다 들어간 한 줄 */
+    clear: both; /* float 속성을 준 후 왼쪽,오른쪽에 다른 요소들이 달라붙(?)거나
+    상위태그의 높이가 사라져 아래에 나타나야 하는 내용이 부유된 태그의 중간에 나타나는 문제 등을 해결하기 위해 사용하는 태그 clear */
+    padding: 0px auto;
+    position: relative;
+    min-width: 40px;
+}
+
+#ulTable > li > ul > li { /* 게시판 하나의 요소 각각 하나하나 (No)(제목)(작성자) 이런 식 */
+    float: left;
+    font-size: 10pt;
+    border-bottom: 1px solid black;
+    vertical-align: baseline; /* 수직정렬 기본값 baseline */
+}
+
+
+                   #divPaging {
+                       clear: both;
+                       /* margin: 0 auto; */
+                       /* width: 400px; */
+                       display: table;  /* 가변 폭의 중앙정렬은 display: table; margin-left: auto; margin-right: auto;로 표기함 */
+                       margin-left: auto;
+                       margin-right: auto;
+                       height: 50px;
+                   }
+
+                   #divPaging > div {
+                       float: left;
+                       width: 40px;
+                       margin:0 auto;
+                       text-align:center;
+                   }
+
+                   #divPaging > div > font > a {
+                     text-decoration: none;
+                     color: black;
+                   }
