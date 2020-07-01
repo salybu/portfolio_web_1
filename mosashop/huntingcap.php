@@ -8,16 +8,6 @@
       <link rel="stylesheet" href="common/card.css">
     <meta charset="utf-8">
     <title>모사샵</title>
-    <style>
-
-    #logo {
-      font-family: 'Permanent Marker', cursive;
-    /*    font-family: Lobster;  */
-      font-size: 40px;
-      padding-left: 30px;
-    }
-
-    </style>
   </head>
   <body>
 

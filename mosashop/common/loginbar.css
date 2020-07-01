@@ -1,3 +1,9 @@
+#logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
 .login_bar {
   overflow: hidden;
   /* overflow 요소의 박스에 내용이 길 때 어떻게 보일지 선택하는 속성

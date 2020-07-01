@@ -9,25 +9,12 @@
     <title>모사샵</title>
     <style>
 
-    #logo {
-      font-family: 'Permanent Marker', cursive;
-    /*    font-family: Lobster;  */
-      font-size: 40px;
-      padding-left: 30px;
-    }
-
     #main_image {
         margin-top: 30px;
     }
 
     </style>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-            <!-- 모자 메뉴 html 파일 끌어다 씀 -->
-         $("#menu").load("menu.html")
-      });
-  </script>
   </head>
   <body>
 

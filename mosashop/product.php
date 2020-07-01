@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <title>모사샵</title>
     <style>
-
+    
     #image_info { /* 제품이미지 왼쪽에 크게 배열함 */
       float: left;
   /*    display: block;  인라인 속성, float는 left해야 됨 */
@@ -148,13 +148,6 @@
           margin-left: 20px;
       }
 
-      #logo {
-        font-family: 'Permanent Marker', cursive;
-    /*    font-family: Lobster;  */
-        font-size: 40px;
-        padding-left: 30px;
-      }
-
       .tleft {
           text-align : left;
       }
@@ -162,22 +155,6 @@
       .set {
         margin-left: 170px;
       }
-
-      #ulTable {
-        margin-left: 100px;
-        margin-top: 30px;
-        line-height: 3em;
-        font-family: "맑은 고딕";
-        text-align: center;
-      }
-
-      #ulTable > li > ul > li:first-child                     {width:7%;} /*No 열 크기*/
-    /*  #ulTable > li > ul > li:first-child +li                 {width:10%;} 답변여부 열 크기*/
-      #ulTable > li > ul > li:first-child +li              {width:10%;} /*구분 열 크기*/
-      #ulTable > li > ul > li:first-child +li+li           {width:40%;} /*제목 열 크기*/
-      #ulTable > li > ul > li:first-child +li+li+li        {width:15%;} /*작성자 열 크기*/
-      #ulTable > li > ul > li:first-child +li+li+li+li     {width:15%;} /*등록일자 열 크기*/
-  /*    #ulTable > li > ul > li:first-child +li+li+li+li+li+li  {width:13%;} 조회수 열 크기 */
 
       #button_ques {
         margin-left: 1140px;
@@ -191,63 +168,16 @@
           background-color: #000000;
       }
 
-      #ulTable2 {
-        margin-left: 100px;
-        margin-top: 30px;
-        line-height: 3em;
-        font-family: "맑은 고딕";
-        text-align: center;
-      }
-
-      #ulTable2 > li {
-        width: 1150px;
-        margin-left: 50px;
-        margin-top: 10px;
-        line-height: 3em;
-        font-family: "맑은 고딕";
-        text-align: center;
-      }
-
-      #ulTable2 > li:first-child > ul > li { /* 맨 위에 분류표시하는 줄 */
-      /*      background-color: #c9c9c9;  */
-          border-top: 2px solid black;
-          border-bottom: 2px solid black;
-          font-weight: bold;
-          text-align: center;
-      }
-
-      #ulTable2 > li > ul { /* 게시판 내용 한 줄 No, 제목, 작성자.. 모든 요소가 다 들어간 한 줄 */
-          clear: both; /* float 속성을 준 후 왼쪽,오른쪽에 다른 요소들이 달라붙(?)거나
-          상위태그의 높이가 사라져 아래에 나타나야 하는 내용이 부유된 태그의 중간에 나타나는 문제 등을 해결하기 위해 사용하는 태그 clear */
-          padding: 0px auto;
-          position: relative;
-          min-width: 40px;
-      }
-
-      #ulTable2 > li > ul > li { /* 게시판 하나의 요소 각각 하나하나 (No)(제목)(작성자) 이런 식 */
-          float: left;
-          font-size: 10pt;
-          border-bottom: 1px solid black;
-          vertical-align: baseline; /* 수직정렬 기본값 baseline */
-      }
-
-      #ulTable2 > li > ul > li:first-child                         {width:10%;} /* No 열 크기*/
-      #ulTable2 > li > ul > li:first-child +li                     {width:20%;} /* 별점 열 크기*/
-      #ulTable2 > li > ul > li:first-child +li+li                  {width:40%;} /* 제목 열 크기*/
-      #ulTable2 > li > ul > li:first-child +li+li+li               {width:15%;} /* 작성자 열 크기*/
-      #ulTable2 > li > ul > li:first-child +li+li+li+li            {width:15%;} /* 등록일자 열 크기*/
-
     </style>
       <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
       <script>
-
 
           $( function() {
 
             $('#sub').click( function(e) { // e는 event 객체를 가리키는 argument
               e.preventDefault(); // 현재 이벤트의 기본 동작을 중단함. 정의한 이벤트 외 브라우저의 별도의 행동을 중단하기 위해 사용됨
-                  var stat = $('#quantity').val();
-                  var num = parseInt(stat, 10);
+                  let stat = $('#quantity').val();
+                  let num = parseInt(stat, 10);
                   num--;
                               if(num <= 0){
                                 alert('더이상 줄일 수 없습니다.');
@@ -255,14 +185,14 @@
                               }
                   $('#quantity').val(num);
 
-                  var price_origin = $('#pricereal_hid').text();
+                  let price_origin = $('#pricereal_hid').text();
                   $('#pricereal').text(addComma(num * price_origin));
             });
 
             $('#add').click( function(e) {
               e.preventDefault();
-                  var stat = $('#quantity').val();
-                  var num = parseInt(stat, 10);
+                  let stat = $('#quantity').val();
+                  let num = parseInt(stat, 10);
                   num++;
                                 if(num > 5){
                                   alert('더이상 늘릴 수 없습니다.');
@@ -270,12 +200,12 @@
                                 }
                   $('#quantity').val(num);
 
-                  var price_origin = $('#pricereal_hid').text();
+                  let price_origin = $('#pricereal_hid').text();
                   $('#pricereal').text(addComma(num * price_origin));
             });
 
             function addComma(num) { // 1,000자리마다 콤마 찍는 메소드
-              var regexp = /\B(?=(\d{3})+(?!\d))/g;
+              let regexp = /\B(?=(\d{3})+(?!\d))/g;
               return num.toString().replace(regexp, ',');
             }
           });
@@ -405,10 +335,10 @@
                              alert("로그인 후에 이용하세요");
                    <?php } else {?>
 
-                   var stat = $('#quantity').val();
-                   var num = parseInt(stat, 10);
+                   let stat = $('#quantity').val();
+                   let num = parseInt(stat, 10);
 
-                     var c = confirm("장바구니에 담으시겠습니까?");
+                     let c = confirm("장바구니에 담으시겠습니까?");
                            if(c == true) //
                            /*    $.ajax({
                                  url: "./cartandorder/cart.php",
@@ -467,7 +397,7 @@
 
   <div style="margin-top: 40px; margin-left: 10px;">
    <?php
-      $filename = explode(',', $row[image_detail]);
+      $filename = explode(',', $row[image_detail]); // 연결돼 있는 이름을 ',' 기준으로 자름
       ?>
       <img src="<?php echo $filename[0];?>" width="1000px">
       <img src="<?php echo $filename[1];?>" width="1000px">

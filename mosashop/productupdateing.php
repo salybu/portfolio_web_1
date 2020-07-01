@@ -162,13 +162,6 @@
           margin-left: 20px;
       }
 
-      #logo {
-        font-family: 'Permanent Marker', cursive;
-    /*    font-family: Lobster;  */
-        font-size: 40px;
-        padding-left: 30px;
-      }
-
       .tleft {
           text-align : left;
       }
